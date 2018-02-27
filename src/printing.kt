@@ -1,5 +1,6 @@
 fun main(args: Array<String>) {
-    printer("print this")
+    val number: Byte = 5
+    printer("print this number: ${number}")
 }
 
 fun printer(str: String) {
