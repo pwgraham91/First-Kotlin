@@ -14,6 +14,9 @@ class Student constructor(firstName: String, lastName: String, age: Byte, var En
         val otherAge = age
         Age = otherAge
     }
+    fun printStudent() {
+        println("Name: ${FirstName} ${LastName}")
+    }
 }
 
 
@@ -26,4 +29,6 @@ fun oop() {
     student1.Address = "34 this address"
     println(student1.Address)
     println(student1.EnrollNo)
+
+    student1.printStudent()
 }
