@@ -3,7 +3,7 @@ package inheritance
 open class Person constructor(name: String, age: Int) {
     var Name: String = ""
     var Age: Int = 0
-    var ID: Int = 0
+    open var ID: Int = 0
 
     init {
         Name = name
@@ -14,7 +14,7 @@ open class Person constructor(name: String, age: Int) {
         ID = id
     }
 
-    fun PrintPerson() {
+    open fun PrintPerson() {
         println("Name: ${this.Name}\n" +
                 "Age: ${this.Age}\n" +
                 "ID: ${this.ID}")
@@ -22,8 +22,14 @@ open class Person constructor(name: String, age: Int) {
 }
 
 class Student(name: String, age: Int, id: Int): Person(name, age) {
+    override var ID: Int = 1
     init {
         ID = id
+    }
+
+    override fun PrintPerson() {
+        super.PrintPerson()
+        println("overridden")
     }
 }
 
